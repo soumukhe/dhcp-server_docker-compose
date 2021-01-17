@@ -1,4 +1,5 @@
-Configuration for dhcp:  https://www.thegeekdiary.com/dhcp-configuration-file-etcdhcpdhcpd-conf-explained/
+# Configuration for dhcp:  https://www.thegeekdiary.com/dhcp-configuration-file-etcdhcpdhcpd-conf-explained/
+# Got main instructions from: https://hub.docker.com/r/networkboot/dhcpd/dockerfile
 
 #  To get up and running:
 1) https://github.com/soumukhe/dhcp-server_docker-compose.git
@@ -10,3 +11,4 @@ Configuration for dhcp:  https://www.thegeekdiary.com/dhcp-configuration-file-et
 To Check if it's running: docker-compose ps
 
 if needed docker-compose restart
+
