@@ -4,10 +4,9 @@
 #  To get up and running:
 1) git clone https://github.com/soumukhe/dhcp-server_docker-compose.git
 2) cd dhcp-server_docker-compose
-3) docker-compose up --build -d
-4) docker-compose build
-5) docker-compose up -d  ( or combine 4 and 5 with docker-compose up --build -d )
-6) To make changes in dhcp config,  cd data (on local host),  make changes to dhcpd.conf,  docker-compose restart
+3) cd data ;  vi dhdpc.conf   and fix the subnet, range and default gateway to match your local subnet and range you desire
+4) docker-compose up --build -d ( or do docker-compose build   followed by docker-compose up -d)
+5) To make changes in dhcp config,  cd data (on local host),  make changes to dhcpd.conf,  docker-compose restart
 
 
 To Check if it's running: docker-compose ps
