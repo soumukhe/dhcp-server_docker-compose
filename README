@@ -1,0 +1,12 @@
+Configuration for dhcp:  https://www.thegeekdiary.com/dhcp-configuration-file-etcdhcpdhcpd-conf-explained/
+
+#  To get up and running:
+
+docker-compose up --build -d
+
+docker-compose build
+docker-compose up -d
+
+docker-compose ps
+
+if needed docker-compose restart
