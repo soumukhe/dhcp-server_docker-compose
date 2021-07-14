@@ -30,3 +30,31 @@ subnet 10.0.0.0 netmask 255.255.0.0 {
   range 10.0.140.1 10.0.141.254;
   option routers 10.0.0.1;
 }
+
+
+In case you don't have a vm with docker/docker-compose, follow these steps first to install:
+--------------------------------------------------------------------------------------------
+
+1) Download Ubuntu 20.04 --  https://ubuntu.com/download/desktop
+2) Install Ubuntu VM minimum versiojn
+3) update/upgrade ubuntu and install basic utils: 
+    sudo -i
+    apt update && apt upgrade -y
+    apt auto-remove
+    apt install -y curl wget vim openssh-server
+ 4) Install docker and docker-compose:
+    ssh to your Ubuntu VM on backend APIM EPG
+    sudo -i
+    apt-get update && apt-get upgrade -y
+    echo net.ipv4.ip_forward=1 >> /etc/sysctl.conf
+    sysctl -p
+    sudo sysctl --system
+    exit 
+    sudo apt install docker.io -y
+    sudo systemctl start docker
+    sudo systemctl enable docker
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
+    exit # and ssh back in for this to work
+    docker --version
+    sudo apt install docker-compose -y
