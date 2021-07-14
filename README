@@ -11,7 +11,7 @@
 
 To Check if it's running: docker-compose ps
 
-if needed docker-compose restart
+if needed docker-compose restart, also do this if you make changes to dhcpd.conf
 
 example dhcpd.conf:
 ---------------------
