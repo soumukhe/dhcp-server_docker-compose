@@ -1,4 +1,4 @@
-# Requirements:  VM with ubuntu and docker/docker-compse installed.  If you don't have that, please look at the bottom of this README file
+# Requirements:  VM with ubuntu and docker/docker-compose installed.  If you don't have that, please look at the bottom of this README file
 
 # Configuration for dhcp:  https://www.thegeekdiary.com/dhcp-configuration-file-etcdhcpdhcpd-conf-explained/
 # Got main instructions from: https://github.com/networkboot/docker-dhcpd
