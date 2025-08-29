@@ -20,8 +20,7 @@ example dhcpd.conf:
 aciadmin@freeradius:~/DHCP-10.0.140.0/data$ cat dhcpd.conf
 #https://www.thegeekdiary.com/dhcp-configuration-file-etcdhcpdhcpd-conf-explained/
 
-## example 1
-### option definitions common to all supported networks...
+## example 1: option definitions common to all supported networks...
 
 ```csv
 option domain-name  "cloudtiger.local";
@@ -36,7 +35,46 @@ subnet 10.0.0.0 netmask 255.255.0.0 {
   option routers 10.0.0.1;
 }
 ```
+## example 2
 
+#### Here, only `.10` to `.19` are available for general dynamic assignment. The addresses `.100` and `.101` are specifically tied to those MAC addresses and are not part of the dynamic pool
+
+```csv
+subnet 10.0.0.0 netmask 255.255.0.0 {
+  range 10.0.140.10 10.0.140.19;  # Only 10 addresses for dynamic assignment
+  option routers 10.0.0.1;
+}
+
+# Static MAC assignments, can use any address within the subnet
+host device1 {
+  hardware ethernet 08:00:27:AA:BB:CC;
+  fixed-address 10.0.140.100;
+}
+
+host device2 {
+  hardware ethernet 08:00:27:DD:EE:FF;
+  fixed-address 10.0.140.101;
+}
+```
+
+## example 3; Only `device1` and `device2` will get IPs via DHCP, tied to their MAC addresses
+
+```csv
+subnet 10.0.0.0 netmask 255.255.0.0 {
+  option routers 10.0.0.1;
+  # No range defined!
+}
+
+host device1 {
+  hardware ethernet 08:00:27:AA:BB:CC;
+  fixed-address 10.0.140.100;
+}
+
+host device2 {
+  hardware ethernet 08:00:27:DD:EE:FF;
+  fixed-address 10.0.140.101;
+}
+```
 
 In case you don't have a vm with docker/docker-compose, follow these steps first to install:
 --------------------------------------------------------------------------------------------
