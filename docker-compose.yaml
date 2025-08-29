@@ -1,15 +1,11 @@
-version: '3'
-
 services:
   dhcp:
     container_name: sm-dhcp
     restart: always
     build:
-     context: .
-     dockerfile:  ./Dockerfile 
-    command: []
-    ports:
-       - "127.0.0.1:67-68:67-68/udp"
+      context: .
+      dockerfile: ./Dockerfile
     volumes:
-      - "./data:/data"
+      - ".//data"
     network_mode: "host"
+
