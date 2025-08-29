@@ -1,9 +1,9 @@
-# Requirements:  VM with ubuntu and docker/docker-compose installed.  If you don't have that, please look at the bottom of this README file
+## Requirements:  VM with ubuntu and docker/docker-compose installed.  If you don't have that, please look at the bottom of this README file
 
-# Configuration for dhcp:  https://www.thegeekdiary.com/dhcp-configuration-file-etcdhcpdhcpd-conf-explained/
-# Got main instructions from: https://github.com/networkboot/docker-dhcpd
+- Configuration for dhcp:  https://www.thegeekdiary.com/dhcp-configuration-file-etcdhcpdhcpd-conf-explained/
+- Got main instructions from: https://github.com/networkboot/docker-dhcpd
 
-#  To get up and running:
+###  To get up and running:
 1) git clone https://github.com/soumukhe/dhcp-server_docker-compose.git
 2) cd dhcp-server_docker-compose
 3) cd data ;  vi dhcpd.conf   and fix the subnet, range and default gateway to match your local subnet and range you desire
@@ -20,8 +20,10 @@ example dhcpd.conf:
 aciadmin@freeradius:~/DHCP-10.0.140.0/data$ cat dhcpd.conf
 #https://www.thegeekdiary.com/dhcp-configuration-file-etcdhcpdhcpd-conf-explained/
 
-# example 1
-# option definitions common to all supported networks...
+## example 1
+### option definitions common to all supported networks...
+
+```csv
 option domain-name  "cloudtiger.local";
 option domain-name-servers 8.8.8.8;
 
@@ -33,6 +35,7 @@ subnet 10.0.0.0 netmask 255.255.0.0 {
   range 10.0.140.1 10.0.141.254;
   option routers 10.0.0.1;
 }
+```
 
 
 In case you don't have a vm with docker/docker-compose, follow these steps first to install:
