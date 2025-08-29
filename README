@@ -20,6 +20,7 @@ example dhcpd.conf:
 aciadmin@freeradius:~/DHCP-10.0.140.0/data$ cat dhcpd.conf
 #https://www.thegeekdiary.com/dhcp-configuration-file-etcdhcpdhcpd-conf-explained/
 
+# example 1
 # option definitions common to all supported networks...
 option domain-name  "cloudtiger.local";
 option domain-name-servers 8.8.8.8;
