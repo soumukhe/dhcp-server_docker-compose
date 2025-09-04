@@ -11,9 +11,20 @@
 5) To make changes in dhcp config,  cd data (on local host),  make changes to dhcpd.conf,  docker-compose restart
 
 
-To Check if it's running: docker-compose ps
+- To Check if it's running: docker-compose ps
 
-if needed docker-compose restart, also do this if you make changes to dhcpd.conf
+- if needed docker-compose restart, also do this if you make changes to dhcpd.conf
+-  where you’ll see DHCP requests, leases granted, and errors:
+``` bash
+   docker logs -f sm-dhcp
+```
+
+-  or you can do:
+```bash
+docker exec -it sm-dhcp bash
+ls -l /var/log | grep dhcp
+grep dhcp /var/log/syslog
+```
 
 example dhcpd.conf:
 ---------------------
