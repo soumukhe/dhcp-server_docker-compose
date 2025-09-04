@@ -78,7 +78,7 @@ host device2 {
 
 In case you don't have a vm with docker/docker-compose, follow these steps first to install:
 --------------------------------------------------------------------------------------------
-
+```bash
 1) Download Ubuntu 20.04 --  https://ubuntu.com/download/desktop
 2) Install Ubuntu VM minimum versiojn
 3) update/upgrade ubuntu and install basic utils: 
@@ -102,3 +102,4 @@ In case you don't have a vm with docker/docker-compose, follow these steps first
     exit # and ssh back in for this to work
     docker --version
     sudo apt install docker-compose -y
+```
