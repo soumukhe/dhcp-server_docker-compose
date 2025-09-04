@@ -99,7 +99,7 @@ max-lease-time 7200;
 
 subnet 10.193.54.32 netmask 255.255.255.224 {
   #range 10.198.54.40 10.198.54.50;  # no general dynamic range
-  option routers 10.198.54.33;
+  option routers 10.193.54.33;
 }
 
 # ---- Static hosts ----
