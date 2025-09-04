@@ -87,6 +87,31 @@ host device2 {
 }
 ```
 
+## example 4
+
+```csv
+# VAST Servers
+option domain-name "mydomain.local";
+option domain-name-servers 8.8.8.8;
+
+default-lease-time 600;
+max-lease-time 7200;
+
+subnet 10.193.54.32 netmask 255.255.255.224 {
+  #range 10.198.54.40 10.198.54.50;  # no general dynamic range
+  option routers 10.198.54.33;
+}
+
+# ---- Static hosts ----
+# ---- Static hosts ----
+host srv-08 { hardware ethernet 30:3e:a7:29:c1:70; fixed-address 10.193.54.62; }
+host srv-07 { hardware ethernet 30:3e:a7:1e:a8:1c; fixed-address 10.193.54.61; }
+host srv-06 { hardware ethernet 30:3e:a7:1e:a8:bc; fixed-address 10.193.54.60; }
+host srv-05 { hardware ethernet 30:3e:a7:1e:a4:d0; fixed-address 10.193.54.59; }
+host srv-04 { hardware ethernet 30:3e:a7:25:e1:d8; fixed-address 10.193.54.58; }
+
+```
+
 In case you don't have a vm with docker/docker-compose, follow these steps first to install:
 --------------------------------------------------------------------------------------------
 ```bash
