@@ -90,7 +90,7 @@ host device2 {
 ## example 4
 
 ```csv
-# VAST Servers
+# My DHCP Static Servers
 option domain-name "mydomain.local";
 option domain-name-servers 8.8.8.8;
 
