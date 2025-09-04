@@ -114,3 +114,13 @@ In case you don't have a vm with docker/docker-compose, follow these steps first
     docker --version
     sudo apt install docker-compose -y
 ```
+
+For newer versions: if docker-compose gives you error:
+
+```bash
+sudo apt remove -y docker-compose
+sudo apt update
+sudo apt install -y docker-compose-plugin
+docker compose version instead of docker-compose version
+```
+
