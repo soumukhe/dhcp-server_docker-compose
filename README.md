@@ -135,7 +135,7 @@ In case you don't have a vm with docker/docker-compose, follow these steps first
     sudo systemctl enable docker
     sudo groupadd docker
     sudo usermod -aG docker $USER
-    exit # and ssh back in for this to work
+    exit # and ssh back in for this to work  - or do newgrp docker
     docker --version
     sudo apt install docker-compose -y
 ```
